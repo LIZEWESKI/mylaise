@@ -23,12 +23,44 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $servers_list = [
+            "Blair",
+            "Brial",
+            "Crail",
+            "Dakal",
+            "Draconiros",
+            "Eratz",
+            "Galgarion",
+            "HellMina",
+            "Henual",
+            "Imagiro",
+            "Kelerog",
+            "Kourial",
+            "Mikhal",
+            "Ombre",
+            "Orukam",
+            "Oto-Mustam",
+            "Rafal",
+            "Rosal",
+            "Rushu",
+            "Salar",
+            "TalKasha",
+            "Talok",
+            "Temporis",
+            "Tiliwan",
+            "Tylezia"
+        ];
+
         return [
+            'custom_id' => fake()->word(),
             'name' => fake()->name(),
+            'pseudonym' => fake()->userName(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'server' => fake()->randomElement($servers_list),
+            'bio' => fake()->sentence(),
         ];
     }
 
