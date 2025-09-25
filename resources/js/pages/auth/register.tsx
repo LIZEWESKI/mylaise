@@ -37,6 +37,19 @@ export default function Register() {
                                 />
                                 <InputError message={errors.name} className="mt-2" />
                             </div>
+                            <div className="grid gap-2">
+                                <Label htmlFor="name">Pseudonym</Label>
+                                <Input
+                                    id="pseudonym"
+                                    type="text"
+                                    required
+                                    autoFocus
+                                    tabIndex={2}
+                                    name="pseudonym"
+                                    placeholder="Pseudo"
+                                />
+                                <InputError message={errors.pseudonym} className="mt-2" />
+                            </div>
 
                             <div className="grid gap-2">
                                 <Label htmlFor="email">Email address</Label>
@@ -44,7 +57,7 @@ export default function Register() {
                                     id="email"
                                     type="email"
                                     required
-                                    tabIndex={2}
+                                    tabIndex={3}
                                     autoComplete="email"
                                     name="email"
                                     placeholder="email@example.com"
@@ -58,7 +71,7 @@ export default function Register() {
                                     id="password"
                                     type="password"
                                     required
-                                    tabIndex={3}
+                                    tabIndex={4}
                                     autoComplete="new-password"
                                     name="password"
                                     placeholder="Password"
@@ -72,7 +85,7 @@ export default function Register() {
                                     id="password_confirmation"
                                     type="password"
                                     required
-                                    tabIndex={4}
+                                    tabIndex={5}
                                     autoComplete="new-password"
                                     name="password_confirmation"
                                     placeholder="Confirm password"

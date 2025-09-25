@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import 'tailwindcss';
 
 @plugin 'tailwindcss-animate';
@@ -5,18 +6,29 @@
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
     /* outfit / montserrat / Paytone One */
     --font-sans:
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-paytone: "Paytone One", sans-serif;
+     --color-button: linear-gradient(
+    to right,
+    oklch(0.6076 0.2295 317.82),
+    oklch(0.6784 0.2438 318.09)
+  );
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+
+    --color-button: var(--button);
+    --color-logo: var(--logo);
+    --color-constructive: var(--constructive);
 
     --color-card: var(--card);
     --color-card-foreground: var(--card-foreground);
@@ -64,6 +76,7 @@
     --foreground: oklch(0.3714 0.0052 91.53);
     --card: oklch(0.928 0 0);
     --card-foreground: oklch(0.3714 0.0052 91.53);
+    --logo: oklch(0.8853 0 0);
     --button: linear-gradient(to right, oklch(0.6076 0.2295 317.82), oklch(0.6784 0.2438 318.09));
     --constructive : linear-gradient(to right, oklch(0.7833 0.1938 148.81), oklch(0.8637 0.2057 149.17));
     --popover: oklch(1 0 0);
